@@ -1,0 +1,240 @@
+---
+title: "Arbeidskrav 5 Analyzing repeated measures experiments"
+author: "Kristoffer Solum"
+date: "16 11 2021"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+editor_options:
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+# Inntroduksjon
+
+I denne oppgaven skal jeg analysere, diskutere og forske på artikler som undersøker effekten av styrketrening på muskelstyrke og muskelvekst.  \
+Forskning på styrketrening har vist det det forbedrer muskelstyrke, muskel masse, beintetthet og bindevevstykkelse [@kraemer2002a]. For å designe et treningsprogram for styrketrening krever det at man tar en del variabler til betraktning, dette inkluderer, treningsfrekvens, intensitet og volum av programmet [@hass2001a]. Innenfor forskningen på styrketrening er det stor forskjell hva er fokuset, og noe av det mest interessante er å se på forskjellen mellom antall sett, som har blitt gjort i flere studier [@krieger2010a]. Tidligere har det blitt argumentert for at ett sett (single- sett) per øvelse er alt som er nødvendig for hele populasjonen og at man ikke får større utbytte av flere sett [@carpinelli1998c]. Mens flere ander studier har argumentert for at det er et større utbytte av flere sett (multiple- sett) per øvelse @galvão2005a; @humburg2007e. Ettersom det er motstridende artikler innenfor dette området ønsker jeg i denne studien å undersøke om det er en større effekt i å trene multiple- sett mot single- sett når det kommer til utvikling av muskelstyrke og muskelvekst.
+
+# Metode
+
+## Forsøkspersoner
+
+I denne studien var det med 41 deltakere mellom 18 og 40, både kvinner og menn. Kvalifikasjonskriteriet var å ikke røyke, og andre ekstra kriterier var intoleranse til lokal bedøvelse, en treningshistorikk på mer enn en ukentlig styrketreningsøkt i løpet av de siste 12 måneder, nedsatt muskelstyrke på grunn av nåværende eller tidligere skade, og inntak av medisiner som kunne påvirke styrketreningen. 7 deltakere ble utelukket fra studien ettersom de ikke oppfylte kravet om å fullføre minst 85% av de planlagte treningsøktene. På Baseline var det ingen signifikant forskjell mellom gruppene som kunne føre til fordeler/ ulemper i testen. Beinøvelser ble utført på ett og ett bein for å kunne tillate for individuelle forskjell i treningsvolum. For hver deltaker ble det randomisert tildelt styrkeøvelser av enten ett sett (single- sett) eller tre sett (multiple- sett) for hvert bein. Muskelstyrken ble målt ved baseline og etter treningsintervensjonen. Muskelbiosien ble målt fra begge bein (vastus lateralis) ved baseline og etter 12 uker med trening i uthvilt tilsand.
+
+ 
+
+## Treningsprotokol
+
+Før alle treningsøktene ble det utført en standardisert oppvarmingsrutine som inneholdt 5 min sykling og 10 repetisjoner med kroppsvekt av pushups, situps, rygghev og squats og 10 repetisjoner på 50% av 1RM på hver øvelse de skal trene. Beinøvelsene ble utført i følgende rekkefølge: ettbeinsbeinpress, kne fleksjon og kneekstensjon utført som enten single- sett eller multiple- sett. Etter beinøvelsene utførte deltakerne to sett av bilatteral benkpress, nedtrekk og enten skulderpress eller sittende roing. Pausene mellom settene var på 90- 180 sekunder. Intensiteten på treningsøktene ble gradvis økt gjennom treningsperioden, deltakerne utførte 10RM de første 2 ukene, etterfulgt av 8RM i 3 uker og 7 uker med 7RM. Treningsøktene med maksimal innsats hadde minst 48t mellom og treningsøkter og submaksimale økter hadde 24t mellom. For å hjelpe med restitusjonen ble en standardisert drikke gitt etter hver øvelse.
+
+Maksimal styrke ble beskrevet som 1RM i ettbeinsbeinpress og kneekstensjon. Testen for hver øvelse startet med en standardisert spesifikk oppvarming før 1RM ble funnet ved å øke motstanden progressivt til deltakeren ikke lenger klarte å løfte vekten.
+
+Tverrsnittarealet til musklene i quadriceps (vastus lateralis, medialis, intermedius og rectus femoris) ble testet før og etter treningsperioden med MRI- scan. Kroppssammensetning ble bestemt før og etter treningsperioden ved bruk av en DXA- scan. Før MRI og DXA målingene måtte deltakerne være fastende i 2timer og måtte unngå hard fysisk aktivitet 48t før.  
+
+## Statestikk
+
+All deskriptiv data er presentert som et gjennomsnitt av prosentvis ending med standardavvik ved mindre annet er oppgitt. p- verdier er regnet ut ved en ANCOVA modell, på endringsscoren fra post til pre. Statistiske tester ble utført i RStudio (versjon RStudio 1.4.1717; R Foundation for Statistics Computing, Vienna, AT)
+
+# Resultater
+
+Totalt, førte 12 uker med styrketrening til en signifikant økning i muskelstyrke på 31±14% for multiple- sett og en økning på 25±13% for multiple- sett (P\<0,001). Økningen i muskelvekst var også signifikant på 3,3±4% for multiple- sett og 2±4% for single- sett (P\<0,001).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+remotes::install_github("dhammarstrom/exscidata")
+
+library(tidyverse)
+library(exscidata) # lastet inn data
+data("dxadata") 
+data("strengthvolume")
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
+library(tidyverse)
+dat <- dxadata %>%  # endre tabellen for å gjøre utregninger
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg", 
+               values_to = "lean.mass", 
+               cols = lean.left_leg:lean.right_leg) %>%
+  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
+         sets = if_else(multiple == leg, "multiple", "single")) %>%
+  select(participant, time, sets, sex, leg, lean.mass) %>%
+  
+  pivot_wider(names_from = time, # Regner ut prosentvis endring
+              values_from = lean.mass) %>%
+  mutate(lbm.change = post - pre) %>%
+  mutate(pre.mc = pre - mean(pre)) %>% 
+  mutate(prosentvis.endring = ((post - pre) / pre) * 100) %>%
+  filter(!is.na(lbm.change)) 
+
+
+  
+  
+  
+
+
+dat %>%   # Regner ut gjennomsnittlig prosentvis økning per gruppe
+  group_by(sets) %>%
+  summarise(m = mean(prosentvis.endring),
+            sd = sd(prosentvis.endring)) 
+
+
+
+
+
+
+
+library(lme4)
+library(lmerTest)
+m0 <- lm(post ~ pre + sex + sets, data = dat) #gjør en analyse
+
+summary(m0)
+plot(m0)
+
+```
+
+
+
+
+```{r Prosentvis økning figur dexa, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Figur 1 viser prosentvis økning ved multiple- sett og singe- sett"}
+dat.mean <- dat %>%
+  group_by(sets) %>%
+  summarise(m = mean(prosentvis.endring, na.rm = TRUE),
+            sd = sd(prosentvis.endring, na.rm = TRUE)) %>%
+  print()
+
+dat.mean %>%
+  
+ggplot(aes(sets, m)) + geom_point() + geom_line() + geom_errorbar(aes(ymax = m + sd, ymin = m - sd, width = 0.2), color = "red") + geom_line(data = dat, aes(sets, prosentvis.endring, group = participant), alpha = 2, color = "blue") +
+
+labs(x = "Gruppe",
+     y = "Prosentvis endring")
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide", fig.cap = "Figur 1 viser økningen i muskelvekst fra pre- post for alle forsøkspersoner skildt ved single- sett og multiple- sett"}
+
+modeldat <- dxadata %>%  # endre tabellen for å gjøre utregninger
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg", 
+               values_to = "lean.mass", 
+               cols = lean.left_leg:lean.right_leg) %>%
+   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
+         sets = if_else(multiple == leg, "multiple", "single")) %>%
+  select(participant, time, sets, sex, leg, lean.mass) %>%
+  group_by(participant) %>%
+  mutate(n = n(), group = factor(sets, levels = c("single", "multiple")), time = factor(time, levels = c("pre", "post")))
+
+
+
+
+modeldat %>%   # Lager figur pre- post per gruppe
+ ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_minimal()
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
+
+styrke1 <- strengthvolume %>% # endre tabellen for å gjøre utregninger
+  filter(!is.na(load)) %>%
+  group_by(exercise) %>%
+  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
+  group_by(participant, time, sex, sets) %>%
+  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
+  ungroup() %>%
+  
+  
+  pivot_wider(names_from = time, # Regner ut prosentvis endring
+              values_from = combined.load) %>%
+  mutate(prosentvis.endring = ((post - pre) / pre) * 100) 
+
+
+styrke1 %>%     # Regner ut gjennomsnittlig prosentvis økning per gruppe
+  filter(!is.na(post)) %>%
+  group_by(sets) %>%
+  summarise(m = mean(prosentvis.endring),
+            sd = sd(prosentvis.endring)) 
+
+
+
+
+s0 <- lm(post ~ pre + sex + sets, data = styrke1) #Gjør analyse
+
+summary(s0)
+plot(s0)
+
+
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide"}
+strengthvolume %>%
+  filter(exercise == "legext", time %in% c("pre", "post")) %>%
+  group_by(sets, time) %>%
+  summarise(m = mean(load, na.rm = TRUE), 
+            s = sd(load, na.rm = TRUE)) %>%
+  mutate(time = factor(time, levels = c("pre", "post"), labels = c("Pre-training", "Post-training")), 
+         sets = factor(sets, levels = c("single", "multiple"), labels = c("Single-set", "Multiple-set"))) %>%
+  ggplot(aes(time, m, color = sets)) + 
+  
+  geom_errorbar(aes(ymin = m - s, ymax = m + s), 
+                position = position_dodge(width = 0.2), 
+                width = 0.2) +
+  geom_point(position = position_dodge(width = 0.2)) +
+  
+  labs(x = "Time-point", 
+       y = "Average load (kg)", 
+       color = "Sets") +
+  
+  theme_bw() + 
+  
+  theme(legend.position = c(0.1, 0.9))
+```
+
+```{r Prosentvis økning figur styrke, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide"}
+styrke.gjennomsnitt <- styrke1 %>%
+  group_by(sets) %>%
+  summarise(m = mean(prosentvis.endring, na.rm = TRUE),
+            sd = sd(prosentvis.endring, na.rm = TRUE)) %>%
+  print()
+
+styrke.gjennomsnitt %>%
+  
+ggplot(aes(sets, m)) + geom_point() + geom_line() + geom_errorbar(aes(ymax = m + sd, ymin = m - sd, width = 0.2), color = "black") + geom_line(data = styrke1, aes(sets, prosentvis.endring, group = participant), alpha = 2, color = "green") +
+
+labs(x = "Gruppe",
+     y = "Prosentvis endring")
+  
+  
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=False, results="hide", fig.cap = "Figur 2 viser endring i muskelstyrke for alle forsøkspersonene fra pre- post skildt ved single- sett og multiple- sett"}
+
+styrkemodell <- strengthvolume %>% # endre tabellen for å gjøre utregninger
+  group_by(exercise) %>%
+  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
+  group_by(participant, time, sex, sets) %>%
+  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
+  ungroup() 
+
+styrkemodell %>% # Lager en figur pre- post per gruppe
+  filter(!is.na(combined.load), time == factor(time, levels = c("pre", "post"))) %>%
+  mutate(time = factor(time, levels = c("pre", "post")),
+         group = factor(sets, levels = c("single", "multiple"))) %>%
+ ggplot(aes(time, combined.load, group = paste(participant, sets), color = sets)) + geom_line() + theme_minimal() 
+```
+
+# Diskusjon
+
+I denne studien viste det at multiple- sett styrketrening førte til bedre økning i muskelstyrke og muskelvekst enn single- sett trening. Dette resultatet stemmer overns med andre studier som har funnet at flere sett er bedre enn en [@galvão2005e; @humburg2007c].
+
+Likevel samsvarer ikke resultatet i denne studien med [@carpinelli1998d]. Der kom de frem til at det ikke var noen signifikant forskjell i størrelsen på styrke økningen mellom 1- sett og multiple sett. I studien til [@carpinelli1998b] så de på studien til [@reid1987a] som fant ut at den gjennomsnittlige økningen i styrke var på 17,7% for single- sett gruppen og på 17,9% multiple- sett. Sammenlignet med vårt resultat som var på henholdsvis 25% og 31% på single- sett og multiple- sett. Disse forskjellene i konklusjon kan muligens bli forklart av [@galvão2005d] konkluderer med at styrketrening med single- sett øvelser er nok til å signifikant øke muskel funksjon, selv om muskelstyrke vil bli bedre ved et høyere treningsvolum som multiple- sett gir.
+
+## Konklusjon
+
+Totalt sett viste denne studien at multiple- sett ga en bedre økning i muskelstyrke og muskelvekst sammenlignet med single- sett. Selv om begge gruppene hadde økning vil det kunne være mer hensiktsmessig å trene styrketrening med multiple- sett.
+
+# Referanser
+
+[@carpinelli1998; @galvão2005; @hass2001; @humburg2007; @kraemer2002; @krieger2010]

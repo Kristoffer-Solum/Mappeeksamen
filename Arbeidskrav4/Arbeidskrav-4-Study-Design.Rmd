@@ -1,0 +1,85 @@
+---
+title: "Study Design"
+author: "Kristoffer Solum"
+date: "12 11 2021"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+bibliography: references.bib
+---
+
+## Inntroduksjon
+
+I denne oppgaven har jeg funnet 5 originalartikler [@billat2000; @billat2001; @dupont2002; @thevenet2007; @wakefield2009] som jeg skal sammenligne og se på hvordan design disse studiene har og hvilke statistiske analyser de bruker. Gjennom denne oppgaven ønsker jeg å fremheve hva studiene gjør bra og hva de eventuet kan gjøre bedre.
+
+## Metode
+
+Formålet i alle studiene handler i hovedsak om å undersøke sammenhengen mellom intensitet ved kortintervaller og hor mye tid det gir over en gitt prosent av det maksimalt oksygenopptak (vo2 maks) deltakerne oppnår ved forskjellige protokoller. studien til @thevenet2007 og @wakefield2009 sammenligner begge effekten av treningsintensitet på tid over 95% av VO2 maks, @thevenet2007 har en hypotese som tilsier at en økning i hastigheten fra 100% av farten ved vo2maks til 115% av farten ved vo2maks under intervallene ville også gi en økning i tiden over 90- og 95% av vo2maks. Mens @wakefield2009 har en motsatt hypotese om at tid på eller over 95% av vo2maks ville være lenger ved løp på 105% av farten ved vo2 maks enn ved 115% av farten ved vo2 maks. Studiene til @billat2000 og @billat2001 til forskjell intervaller hvor de ser på hvordan man kan fremkalle mest tid ved 100% av vo2maks, deriblant hvilken intensitet og intervallform som er best for dette. Mens @dupont2002 passer bra inn med alle de andre artiklene over og ser på både tid ved vo2maks og tiden over 90% av vo2maks ved kortintervaller 15/15.
+
+Alle studiene presenterte en hypotese. Hypotesen de kommer med er begrunnet av tidligere forskingsdata. Som et eksempel begrunner @wakefield2009 sin hypotese ved å referere til data i studien til @thevenet2007. Gjennom å presentere denne dataen fra tidligere forskning skapes det en logisk linje gjennom introduksjonen til hypotesen. Dette blir gjort på en spesielt god måte i artikkelen til @thevenet2007 hvor artikkelen starter bredt med å fortelle om vo2maks, og at det er ansett som en viktig faktor innenfor langdistanseløping. Dette blir bygget opp ved å referere til tidligere artikler som har kommet frem til dette. Videre blir det beskrevet treningsmetoder for å forbedre vo2maks, hvor mye tid på en høy % av vo2maks blir beskrevet som en viktig faktor spesielt tid over 90- og 95% av vo2maks. Etter dette beveger introduksjonen i artikkelen seg over på å fortelle om intervalltrening og spesielt kortintervaller og effekt på å kunne arbeide på en høy % av vo2 maks. Artikkelen forteller videre om andre forskingsartikler som har sett på kortintervaller og tid over 90 og 95% men avdekker samtidig kunnskapshull i disse artiklene. Dette gjør at @thevenet2007 formulerer en hypotese basert på informasjonen om vo2maks og kortintervaller som skal forsøke å tette disse kunnskapshullene som ble beskrevet i introduksjonen.\
+Dermed funker denne introduksjonen som en trakt som starter med å fortelle om et tema bredt, og smaler seg etter hvert inn på mindre temaer og spesifikke problemer den ønsker å svare på, samtidig som den har en rød trå eller logisk linje gjennom introduksjonen og frem til hypotesen. De andre artiklene følger i likhet denne samme strukturen i sin innledning som leder til en hypotese.
+
+Studiedesignet i alle disse studiene var randomisert kontrollert undersøkelse (RCT). I en RCT metode der sammenlignes flere grupper. Gruppene som sammenlignes burde være så like som mulig med tanke på alt som kan påvirke utfallet. Dette oppnås ved å tilfeldig fordele eller randomisere deltakerne. I disse testene ble deltakerne randomisert i grupper som skulle utføre forskjellige intervaller eller så ble det randomisert rekkefølgen de skulle gjennomføre intervallene i. Denne randomisering er den metoden som med størst sannsynlighet gir sammenlignbare grupper.
+
+Siden alle studiene på forhånd hadde spesifisert en primær hypotese stemmer dette også godt med designet i en clinical tril. En god regel for clinical trial, er å etablere flere hypoteser på forhånd som gir mening, men å spesifisere en hypotese som den primære, denne må kunne bli statistisk testet uten argument om at hyoptesen må endres (@hulley2013 s53). Mer viktig vil en primær hypotese hjelpe studien å fokusere på dens hovedoppgaver og bidra til en ren base for kalkulasjoner av utvalgsstørrelsen (@hulley2013 s53).
+
+Alle studiene hadde en god beskrivelse av forsøkspersonene som var med i testen. De viste alle frem med standardavvik antall deltakere, kjønn, alder, høyde og vekt. Alle studiene fortalte også at alle deltakere var godt trente personer, at de hadde meldt seg som frivillige og at de var fullt informert over test prosedyren og hadde underskrevet på dette, foresatte underskrev for deltakere under 18 år. Alderen på deltakerne i de forskjellige studiene varierte mye hvor @thevenet2007a hadde den yngste snittalderen på 16,1± 1 mens @billat2001 hadde den eldste snittalderen på 51±6. Ingen av disse to studiene forsvarte hvorfor de valgte å teste disse aldersgruppene på henholdsvis yngre og litt eldre utøvere.\
+I testen til @thevenet2007 ble det forklart at deltakeren alle var rekruttert fra samme treningsklubb, og i studiene til både @dupont2002 og @wakefield2009 var deltakeren idrettsstudenter. I de to resterende artiklene var det ikke oppgitt hvor deltakerne var rekruttert fra @billat2001 og @billat2000 . Alle studiene hadde forholdsvis få deltakere med mellom 7-9 personer, og ingen av studien hadde noen forklaring på hvorfor de hadde det antallet deltakere. Dette er litt underlig ettersom en studie med flere deltakere ville gitt en større statistisk styrke, fordi det da vil være fler observasjoner som påvirker gjennomsnittet.\
+I alle studiene ble det brukt p-verdier som hvor signifikantnivået var P\<0.05. ingen av studiene brukte andre tester som t- test eller effektstørrelse som kunne ha bidratt til å styrke resultatet ettersom dette er en test som kan styrke opp om p- verdien. Hvordan testene ble gjennomført var svært forskjellige @wakefield2009 gjennomførte testen på mølle med 1% stigning mens resten av testene ble gjennomført på løpe bane. Alle studiene hadde intervaller som en av testene, her var alle kortintervaller med mellom 15- 30sek arbeidstid. Før intervallene gjennomførte alle studiene vo2maks test, som ble bestemmende for farten de skulle løpe på under intervallene. @dupont2002 hadde den raskeste hastigheten med 15/15s intervaller på 140% av farten ved vo2maks, mens @thevenet2007 hadde intervaller med lavest hastighet 30/30sek med 100% av farten ved vo2maks. Under alle testene ble gassutveksling målt, dette innebar variabler som ventilasjon, pustefrekvens, oksygen, og co2. I tillegg målte alle studiene laktat mens @billat2001 og @billat2000 var de eneste som ikke målte hjertefrekvens. Av disse målingene var oksygenmålingen den eneste variabelen som direkte svarte på hypotesen i alle studiene.
+
++----------------+---------------+---------------------------------------------+
+| Studie         | Deltakere     | Studiedesign                                |
++================+===============+=============================================+
+| @thevenet2007  | N= 9\         | RCT\                                        |
+|                | Kjønn= M\     | Løpetest: 400m løpebane                     |
+|                | Alder= 16,6±1 |                                             |
+|                |               | Intervall 1: 30/30sek 100% fart ved VO2maks |
+|                |               |                                             |
+|                |               | Intervall 2: 30/30sek\                      |
+|                |               | 110% fart ved VO2maks                       |
++----------------+---------------+---------------------------------------------+
+| @wakefield2009 | N= 7\         | RCT\                                        |
+|                | Kjønn= M\     | Løpetest: Løpemølle 1% stigning             |
+|                | Alder= 22 ± 5 |                                             |
+|                |               | Intervall 1: 20/20sek på 105 og 115%        |
+|                |               |                                             |
+|                |               | Intervall 2: 25/20sek på 105 og 115%        |
+|                |               |                                             |
+|                |               | Intervall 3: 30/20sek på 105 og 115%        |
++----------------+---------------+---------------------------------------------+
+| @billat2001    | N= 7\         | RCT\                                        |
+|                | Kjønn= M\     | Løpetest: 400m løpebane                     |
+|                | Alder= 51±6   |                                             |
+|                |               | Intervall 1: 15/15sek på 90-80%             |
+|                |               |                                             |
+|                |               | Intervall 2: 15/15sek på 100-70%            |
+|                |               |                                             |
+|                |               | Intervall 3: 15/15se på 60 x 110%           |
++----------------+---------------+---------------------------------------------+
+| @billat2000    | N= 8\         | RCT\                                        |
+|                | Kjønn= M\     | Løpetest: 400m løpebane                     |
+|                | Alder= 34±6   |                                             |
+|                |               | Intervall 1: 30/30 sek på 100%              |
+|                |               |                                             |
+|                |               | Intervall 2: 30/30sek på laktattersekel     |
++----------------+---------------+---------------------------------------------+
+| @dupont2002    | N= 9\         | RCT\                                        |
+|                | Kjønn= M\     | Løpetest 200m løpebane                      |
+|                | Alder= 25±2,8 |                                             |
+|                |               | Løpetest 1: 15/15sek på 110%                |
+|                |               |                                             |
+|                |               | Løpetest 2: 15/15sek på 120%                |
+|                |               |                                             |
+|                |               | Løpetest 3: 15/15sek på 130%                |
+|                |               |                                             |
+|                |               | Løpetest 4: 15/15sek på 140%                |
++----------------+---------------+---------------------------------------------+
+
+Alle studiene adresserte hypotesen deres i konklusjonen, og diskuterte rundt resultatene de fikk. I studiene til @billat2000 og @thevenet2007 foreslo studiene at ytterligere forskning krevdes for å kunne fastslå resultatet helt. Dette var fordi forskingen deres ikke så på langtidsvirkningen av intervallene og det mente de var nødvendig for å kunne fastslå om den typen intervall som prestere best i deres studie faktisk ville være den beste for utvikling av kardiovaskulære systemer over tid. I tillegg var det interessant å se at alle studiene antatt @dupont2002 kun snakket om sine egne resultater i konklusjonen. Mens @dupont2002 refererte til andre studier i sin egen konklusjon.
+
+Totalt sett syns jeg at alle studiene gjør en grei oppgave med statistiske tester. Likevel savner jeg at alle studiene kunne forklart antall deltakere, dette er fordi fler deltakere ville gitt en mye bedre statistisk styrke til studien og det er merkelig av forfattere og ikke annerkjenne dette. De kunne også gjøre flere statistiske tester, for å styrke resultatet de kommer med i konklusjonen og for å vise bedre frem at det resultatet de kom frem til faktisk stemmer.
+
+## Referanser
+
+[@billat2000; @billat2001; @dupont2002; @hulley2013; @thevenet2007; @wakefield2009]
