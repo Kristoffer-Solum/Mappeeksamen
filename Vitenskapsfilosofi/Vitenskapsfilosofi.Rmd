@@ -1,0 +1,100 @@
+---
+title: "Vitenskapsfilosofi"
+author: "Kristoffer Solum"
+date: "30 11 2021"
+output:
+  word_document: default
+  html_document: default
+editor_options:
+  markdown:
+    wrap: sentence
+bibliography: references.bib
+---
+
+# Falsifikasjonisme
+
+### Hva er Poppers falsifiserbarhetskriterium og hvilket spørsmål skal dette kriterium gi svar på? Hvorfor mener andre vitenskapsfilosofer (f.eks. Okasha) at vi ikke trenger å svare på dette spørsmålet? Hvem synes dere har rett?
+
+Poppers falsifiserbarhetskriterium handler enkelt forklart om hva han mente var en god vitenskapelig teori og hva som var en dårlig.
+I følge Popper ville det å si at noe var en god vitenskapelig teori bety at den var falsifiserbar @okasha2016.
+At en teori er falsifiserbar, betyr at det skal være mulig å påvise at den er gal eller uholdbar, og er det motsatte av å kunne verifisere.
+I følge popper var det en skarp linje mellom vitenskapelige og uvitenskapelige teorier, altså falsifiserbare og ufalsifiserbare teorier @okasha2016.
+Og at vitenskapelige teorier ikke kunne bli bekreftet, hverken godt eller dårlig de kan kun bli falsifisert og aldri bekreftet @okasha2016.
+Med dette mente popper at man kunne unngå induksjonsproblemet, som er hvordan man skal begrunne gyldigheten til teorier @okasha2016.
+For hvis man isteden bare prøvde å falsifisere dem var det ingen grunn til å bruke induksjon.
+Bakgrunnen for falsifiserbarhetskriteriet til popper var også at det skulle gi et svar på demarkasjonsproblemet, som er spørsmålet om hva som egentlig skiller vitenskap fra ikkevitenskap.
+
+Den logiske strukturen til poppers falsifisering er at fra en teori kan vi utarbeide hypoteser, hvis disse hypotesene viser seg å være usanne via observasjoner og eksperimenter, vil dette bety at teorien er usann @okasha2016.
+En falsifiserbar teori vil da stride med noen mulige empiriske observasjoner, den vil også gi gode forutsigelser, altså forutsigelser som kan bli testet mot data og som ville falsifisere teorier hvis ikke dataen stemmer med forutsigelsen @okasha2016.
+En ufalsifiserbar teori vil derimot være forenlig med alle mulige empiriske observasjoner, og den vil ikke gjøre noen forutsigelser som kan testes mot dataen og dermed kunne falsifisere teorien dersom dataen ikke passet med forutsigelsen @okasha2016.
+
+Andre vitenskapsteorier mener at det ikke er en skarp linje mellom vitenskapelige og uvitenskapelige teorier.
+Derimot er den viktigste forskjellen mellom godt og dårlig bekreftede teorier.
+Spesielt @okasha2016 mente at svakheten i Poppers argument var klar.
+For målet med vitenskapen er ikke bare å motbevise teorier, men også anta hvilke teorier som er sanne eller mest sannsynlig sanne.
+Han foreslo at når vitenskapsmenn samler data vil kanskje målet deres være å vise at en spesiell teori, muligens fra deres erkerival, er feil.
+Men mer sannsynlig prøver de å bevise at deres egen teori er sann.
+Og for å kunne gjøre dette må de muligens ty til en form for induktivt argument.
+Så Poppers forsøk på å vise at vitenskap kan klare seg uten induksjon lykkes ikke.
+Slik jeg ser det veldig vanskelig å avgjøre hvem jeg syns har rett, jeg syns at popper har et veldig godt poeng med å ha et falsifiseringskriterium og et skarpt skille mellom hva som er vitenskap og ikke.
+Ved dette vil det bli veldig klart hva som er vitenskap og det kan være en stor fordel.
+Samtidig er det ikke helt riktig å dra all vitenskap som ikke kan falsifiseres under en kam og kalle det for psudo- vitenskap, eller ikke vitenskap.
+Så jeg syns det er vanskelig å gjøre meg opp en klar mening om hvem som har rett når jeg syns begge to har gode meninger.
+
+# HD-metoden og abduksjon/Bayesisme
+
+### Hva er strukturen på et bekreftende vitenskapelig argument ifølge den hypotetisk deduktive metode? Forklar ut fra Hempels artikkel men bruk egne eksempel. Sammenlign også Hempels HD-metode med hvordan vitenskapelig bekreftelse fungerer ifølge enten abduksjon eller Bayesianisme.
+
+Hypotetisk deduktiv metode, eller HD- metoden har en struktur som bekrefter vitenskapelige argumenter gjennom å få positive resultater når man tester de deduktive konsekvensene av teorien @hempel1966.
+Strukturen til HD- metoden er beskrevet av Hempel @hempel1966, det første trinnet i HD- metodens strukturen er en «utdannet gjetning», her blir det formulert en hypotese eller teori.
+I det andre trinnet i strukturen blir det utledet empiriske konsekvenser fra teorien eller hypotesen.
+Testingen eller observasjoner av disse empiristiske konsekvensene skjer i trinn tre.
+Og i trinn fire ser man på om de empiriske konsekvensene viser seg å være riktige, og da blir teorien bekreftet til en viss grad, på induktivt vis.
+Hvis jeg skal forklare HD- metoden ved et eget eksempel kan jeg stille et spørsmål som «hvordan kan vi vite at kyssesyken er et virus?»
+I trinn to, vil i så fall da kyssesyken (a) være smittsom, men (b) ikke bli kurert av antibiotika.
+I trinn tre, vil observasjoner og eksperimenter vise at kyssesyken både er (a) og (b).
+Derfor vil vi i trinn fire kunne få en induktiv bekreftelse på at kyssesyken er forsaket av et virus.
+
+En annen form for vitenskapelig bekreftelse som er interessant å sammenligne med den hypotetiske deduktive metoden er bayesianisme.
+Bayesianisme er en metode som brukes for å øke tillitten til en teori eller hypotese ettersom mer informasjon og bevis blir tilgjengelige @okasha2016.
+For å få til dette brukes det sannsynlighet, ifølge bayesianisme må en rasjonell person meninger om hvor sannsynlig forskjellige påstander er.
+Dette betyr at om en forsker er 50% sikker på at en teori er riktig må man også være 50% sikker på at teorien er usann.
+Sannsynligheten kommer ut i fra at forskere bruker den bayesiske kondisjonaliseringsregelen, som sier at når en har hentet inn data(D), burde sannsynlighetsverdiene for en teori(T) oppdateres gjennom å kondisjonalisere D.
+Og T burde da aksepteres som bekreftet når sannsynligheten er tilstrekkelig høy @okasha2016.
+Et eksempel på bayeiansisme i praksis blir beskrevet av Okasha @okasha2016 som følger, hvis vi ser for oss at en T har et testbart utsagn (U), og forskeren i utgangspunktet har tillit til at både T og U er sant.
+Vi antar at både T og U tar «non- extreme values», som vil si at de verken er en eller null.
+Hvis vi deretter ser for at forskeren finner ut at U er definitivt sant, vil det være logisk at forskeren får en enda større tro på at T også er sann.
+Med andre ord en forsker som oppdager at teorien deres har gitt en sann spådom vil nødvendigvis øke deres tillitt til teorien så lenge de adlyder kondisjonaliseringsregelen.
+Så det faktum at suksessfulle utsagn ofte fører til at forskere får mer tiltro til deres egen teori, har en ryddig forklaring på det bayesianske synet på vitenskapelig bekreftelse @okasha2016.
+Hovedforskjellen mellom hypotetisk deduktiv metode og bayesisme er da at HD- metoden tar en utdannet gjetting i forhold til observasjonene den får inn, mens bayesisme bare blir styrket mer og mer etter som den får inn flere resultater og tilslutt blir bekreftet når sannsynligheten er høy nok.
+Begge metodene tar også en bekreftelse ut fra resultatene de kommer frem til, men HD- metoden har på forhånd en hypotese den tester ut ifra, som eksemplet mitt viste hvor hypotesen var at kyssesyken var et virus.
+I HD- metoden blir da eksperimentene og forskningen testet for å bekrefte eller motbevise dette, mens i bayesismen vil da teorien til forskerne kunne endres mye underveis ettersom hvilke resultater de kommer frem til.
+
+# Replikasjonskrisen
+
+### Hva mener Alexander Bird er forklaringen til at mange resultat i noen vitenskaper ikke repliseres? Oppsummere Birds argument for dette. Sammenlign også Birds forklaring med noen av de andre forklaringene som Bird diskuterer i seksjon 4. Har Bird rett i at hans forklaring er bedre?
+
+Begrepet replikasjonskrisen er brukt til å beskrive både at det er enormt mange felt av studier det ikke er mulig å replisere, og at disse feltene står ovenfor en krise som en konsekvens av dette @bird2020.
+Ut av 1576 forskere i en undersøkelse mener hele 52% at det er en signifikant krise når det kommer til replikasjon @baker2016 .
+En spesiell bekymring av replikasjonskrisen er at det vil muligens øke mistillit til vitenskapen som tilhører helt andre felt enn der selve replikasjonskrisen oppstår @bird2020.\
+Grunnen til at mange resultater innenfor forskingen ikke kan repliseres er på grunn av basefrekvensfeilen, her er det to typer feil, akseptere en usann teori og avise en sann teori.
+Bird @bird2020 mener Basefrekvensfeilen vil gjerne oppstå når man trekker en slutning om sannsynligheten for en bestemt forekomst av et generelt fenomen, for eksempel om en person har en sykdom.
+Feilslutningen oppstår når forskeren fokuserer utelukkende på et eller annet fremtredende bevis mens han overser hvor mange forekomster av dette fenomenet vil skje uansett, uavhengig av beviset.
+Dette fører til feilaktige konklusjoner når bevisene er sterkt, men ikke helt korrekt, for eksempel når bevisene er en slags test for et fenomen, og selve fenomenet er sjeldent.
+For å demonstrere dette bruker Bird et eksempel hvor passasjerer på et fly bli undersøkt for å være terrorister, hvor testen er 95% riktig.
+I dette tilfelle vil testen si at av 100 personer som ikke er terrorister vil 95 være ikke terrorist og 5 vil være terrorister.
+I så fall om en person ikke består testen vil den si at han er en terrorist.
+Dette mener Bird var tullete etter som det absolutt ikke var en så høy sannsynlighet for at passasjerer på fly er terrorister.
+Hvis denne testen blir trodd vil det i så fall bli akseptert en usann teori.
+Hvis mange av hypotesene vi tester er usanne, da er sannsynligheten til hypotesene som bekreftes i mange vitenskaper ganske lav @bird2020.
+Andre forklaringer for replikasjonskrisen som Bird diskuterer er at enkelte har assosiert replikasjonskrisen med den lave statistiske kraften fra mange av studiene.
+Populasjonen altså antall deltakere, styrer i stor grad styrken til forskningen, og gir en større sannsynlighet for å ikke få en type II feil, altså et falsk negativt resultat @bird2020.
+Ifølge Bird er dette likevel ikke en god forklaring fordi man fremdeles får en høy sannsynlighet for type II feil selv med høy statistisk styrke @bird2020.
+For å understreke dette viser Bird frem en utregning som tilsier at det fremdeles er 31% sjanse for type II feil selv med høyere statistikk enn i «vanlig» vitenskap @bird2020.
+Bird mener det dermed vil være en stor fordel for vitenskapen å få opp den statistiske styrken men det vil likevel ikke gi en løsning på krisen.\
+Basert det man har sett av studier er det vanskelig å gi en fast konklusjon men, dårlig praksis og juks kan være en forklaring på replikasjonskrisen @bird2020.
+Derfor vil det ikke være gode nok argumenter til å mene at en dårlig moral innenfor vitenskapen kan forklare hele krisen @bird2020.
+Slik jeg tolker det er det ganske tydelig at Bird mener hans egne argumenter og forklaring gir mest styrke til teorien om replikasjonskrisen.
+Og en større forståelse av statistikk og sannsynlighet vil være viktig for alle som driver med vitenskap @bird2020.
+
+# Referanser
